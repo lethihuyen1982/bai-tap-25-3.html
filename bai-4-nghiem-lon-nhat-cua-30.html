@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="num" oninput="checkSNT()">
+    <code id="panel"></code>
+    <script>
+        function checkSNT() {
+            let n = Number(document.getElementById("num").value)
+            let i = 1
+            let lastRoot = 0
+            while (i < n) {
+                if (n % i == 0) {
+                    lastRoot = i
+                }
+                i++
+            }
+            if (lastRoot == 1) {
+                document.getElementById("panel").innerText = n + " la so nguyen to"
+            } else {
+                document.getElementById("panel").innerText = n + " khong la so nguyen to"
+            }
+        }
+    </script>
+</body>
+
+</html>
